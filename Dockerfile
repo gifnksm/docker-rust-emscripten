@@ -19,5 +19,6 @@ RUN apt-get update \
 RUN rustup target add asmjs-unknown-emscripten \
     && rustup target add wasm32-unknown-emscripten
 
-RUN rustc --version --verbose \
+RUN rustup show \
+    && rustc --version --verbose \
     && cargo --version --verbose
